@@ -1,0 +1,167 @@
+
+.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+
+.nav-logo {
+  font-size: 26px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #007bff, #7a00ff);
+  color: transparent;
+
+  background-clip: text;            
+  -webkit-background-clip: text;    
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+  color: #333;
+}
+
+.nav-menu li:hover {
+  color: #007bff;
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #7a00ff);
+  bottom: -6px;
+  left: 0;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+
+.nav-social {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icon {
+  font-size: 22px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+  transform: translateY(-3px);
+}
+
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 260px;
+  height: 100vh;
+
+  background: white;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  box-shadow: -2px 0 15px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+  z-index: 200;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-menu li {
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-menu li:hover {
+  color: #007bff;
+}
+
+
+.mobile-social {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.mobile-social a {
+  color: #333;
+}
+
+.mobile-social a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 900px) {
+  .nav-menu,
+  .nav-social {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding: 16px 25px;
+  }
+}

@@ -1,0 +1,90 @@
+.experience {
+  padding: 100px 80px;
+  background: #fafafa;
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.exp-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  border-left: 6px solid #6a4bff;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease-in-out;
+}
+
+.exp-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.exp-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.exp-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.exp-card ul li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
+}
+
+.exp-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6b4bff;
+  font-size: 20px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 750px) {
+  .experience {
+    padding: 70px 25px;
+  }
+
+  .experience-title {
+    font-size: 34px;
+  }
+
+  .exp-card {
+    padding: 28px;
+  }
+
+  .exp-card h2 {
+    font-size: 22px;
+  }
+
+  .exp-card h3 {
+    font-size: 16px;
+  }
+
+  .exp-card ul li {
+    font-size: 16px;
+  }
+}

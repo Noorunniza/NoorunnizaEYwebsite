@@ -1,0 +1,183 @@
+/* ===========================
+   DESKTOP DESIGN (default)
+   =========================== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px;
+  background: #ffffff;
+  gap: 50px;
+}
+
+.hero-left {
+  max-width: 560px;
+  animation: fadeUp 1s ease;
+}
+
+.hero-left h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #007bff, #7a00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.role {
+  font-size: 28px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hero-summary {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.hire {
+  background: linear-gradient(90deg, #007bff, #7a00ff);
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.resume {
+  background: #222;
+  color: white;
+}
+
+
+/* RIGHT SIDE */
+.hero-right {
+  position: relative;
+}
+
+.image-card {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: white;
+  padding: 8px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.12);
+  animation: float 3s infinite ease-in-out;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bg-circle {
+  width: 380px;
+  height: 380px;
+  background: linear-gradient(135deg, #007bff22, #7a00ff22);
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .role {
+    font-size: 20px;
+  }
+
+  .hero-summary {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bg-circle {
+    width: 250px;
+    height: 250px;
+    top: -10px;
+    left: 10px;
+  }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .hero-summary {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .image-card {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
