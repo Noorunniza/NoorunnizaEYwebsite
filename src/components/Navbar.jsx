@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
+import { FaGithub, FaLinkedin,FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +35,9 @@ function Navbar() {
         <a href="https://linkedin.com/in/noorunniza-e-y" target="_blank" rel="noreferrer">
           <FaLinkedin className="nav-icon" />
         </a>
+        <a href="https://instagram.com/noorunniza_" target="_blank" rel="noreferrer">
+    <FaInstagram className="nav-icon" />
+  </a>
       </div>
 
       {/* MOBILE MENU ICON */}
