@@ -1,14 +1,20 @@
-/* ===========================
-   DESKTOP DESIGN (default)
-   =========================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
+  
+  /* Clean top spacing for fixed navbar */
+  padding-top: 150px;  /* Adjust to 150px or 160px if needed */
+
+  /* Side + bottom spacing */
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-bottom: 120px;
+
   background: #ffffff;
   gap: 50px;
 }
+
 
 .hero-left {
   max-width: 560px;
@@ -110,7 +116,7 @@
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    padding: 40px 20px;
+     padding: 140px 20px 60px 20px !important;
     text-align: center;
   }
 

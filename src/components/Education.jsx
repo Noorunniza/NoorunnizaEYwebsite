@@ -4,7 +4,8 @@ import "./Education.css";
 function Education() {
   return (
     <section className="education" id="education">
-      <h1>Education</h1>
+      <h1 className="education-title">Education</h1>
+
 
       <div className="edu-card">
         <h2>M.Voc in Software Application Development</h2>

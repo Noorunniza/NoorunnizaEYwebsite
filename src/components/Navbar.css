@@ -4,16 +4,17 @@ html, body {
 }
 
 .navbar {
+  position: fixed;          /* STAYS on top on every scroll */
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+
   padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-
-  position: sticky;
-  top: 0;
-  z-index: 100;
 
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.7);
